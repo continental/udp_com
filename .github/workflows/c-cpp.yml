@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: setup directories
-      run: mkdir catkin_ws/src
+      run: mkdir -p catkin_ws/src
     - name: checkout
       uses: actions/checkout@v2
       with:
