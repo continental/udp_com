@@ -1,8 +1,6 @@
 name: C/C++ CI
 
 on:
-  push:
-    branches: [ master ]
   pull_request:
     branches: [ master ]
 
@@ -12,12 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: configure
-      run: ./configure
-    - name: make
-      run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+    - name: checkout
+      uses: actions/checkout@v2
+    - name: Setup ROS environment
+      uses: ros-tooling/setup-ros@0.0.25
+      with: "melodic"
+    - name: test
+      run: catkin_make
