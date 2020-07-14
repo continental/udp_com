@@ -1,8 +1,6 @@
 name: ROS CI
 
-on:
-  push:          # run on all pushes & PR's for every branch
-  pull_request:  # run on all pushes & PR's for every branch
+on: [push, pull_request]   # run on all pushes & PR's for every branch
 
 jobs:
   build:
