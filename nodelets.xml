@@ -1,0 +1,9 @@
+<library path="lib/libudp_com">
+  <class name="udp_com/UdpComNodelet"
+         type="udp_com::UdpComNodelet"
+         base_class_type="nodelet::Nodelet">
+    <description>
+      Listens on a UDP port and publishing UDP messages.
+    </description>
+  </class>
+</library>

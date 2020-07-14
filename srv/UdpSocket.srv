@@ -1,0 +1,6 @@
+string srcAddress
+string destAddress
+uint16 port
+bool isMulticast
+---
+bool successful

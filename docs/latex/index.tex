@@ -1,0 +1,46 @@
+This package was designed as a generic package to assist with interfacing R\+OS with the U\+DP transport layer. It provides R\+OS Services for creating sockets, sending and receiving U\+DP data.
+
+{\bfseries{Supported platforms/releases}}\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Platform }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ R\+OS Release  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Platform }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ R\+OS Release  }\\\cline{1-2}
+\endhead
+\href{http://releases.ubuntu.com/18.04.4/}{\texttt{ Ubuntu 18.\+04 Bionic}} &\href{http://wiki.ros.org/melodic/Installation/Ubuntu}{\texttt{ R\+OS Melodic}}  \\\cline{1-2}
+\end{longtabu}
+
+
+There are two ways of utlizing this package\+:
+\begin{DoxyItemize}
+\item using the provided launch file and launching from the command line
+\begin{DoxyItemize}
+\item {\ttfamily roslaunch udp\+\_\+com udp\+\_\+com.\+launch}
+\end{DoxyItemize}
+\item integrating into a custom project via source code
+\end{DoxyItemize}
+
+In either case, the udp\+\_\+com package provides R\+OS services for interfacing with the U\+DP transport layer\+:
+\begin{DoxyItemize}
+\item {\bfseries{create\+\_\+socket\+\_\+service}}\+: creates a U\+DP socket and creates an instance to receive/send data
+\item {\bfseries{send\+\_\+service}}\+: creates a R\+OS service to send data to a specific socket
+\end{DoxyItemize}
+
+Please \href{https://github.conti.de/pages/ADAS-LIDAR/udp_com/html/index.html}{\texttt{ review the source code documentation}} for more details on how the project is structured.
+
+\doxysubsection*{Getting started}
+
+For anyone already familiar with R\+OS, please see how this package is \href{https://github.conti.de/ADAS-LIDAR/hfl_ros}{\texttt{ utilized and implemented in the hfl\+\_\+driver package}}.
+
+First, make sure your using the targeted platform and releases listed above.
+
+Go ahead and clone this repo\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git clone https://github.conti.de/ADAS-\/LIDAR/udp\_com}
+\end{DoxyCode}
+ 

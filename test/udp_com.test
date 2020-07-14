@@ -1,0 +1,17 @@
+<launch>
+  <arg name="manager_name" default="manager" />
+  <arg name="interface" default="eth0" />
+
+  <!-- Nodelet Manager -->
+  <node pkg="nodelet" type="nodelet" name="$(arg manager_name)" args="manager" output="screen" ns="$(arg interface)" />
+
+  <!-- UDP COM Nodelet -->
+  <node pkg="nodelet" type="nodelet" name="udp" args="load udp_com/UdpComNodelet $(arg manager_name)" output="screen" ns="$(arg interface)">
+  </node>	
+  
+  <test test-name="UdpCom" pkg="udp_com" type="tests_udp_com" ns="$(arg interface)" />
+
+</launch>
+
+
+	

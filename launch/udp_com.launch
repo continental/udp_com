@@ -1,0 +1,39 @@
+<launch>
+	
+	<!-- Given Arguments -->
+
+	<!--OPTIONALLY ADD INTIALIZING SOCKETS TO BE CREATED -->
+	<arg name="multicast_addr" default="239.0.0.5" />
+	<arg name="camera_addresses" default="[192.168.10.21, 192.168.10.14]"/>
+	<arg name="computer_addresses" default="[192.168.10.14, $(arg multicast_addr)]"/>
+	<arg name="udp_ports" default="[54789, 54788]" />
+	
+		<!-- Node Parameters -->
+	<arg name="ethernet_interface" default="enp0s25" />
+	<arg name="manager_name" default="udp_manager" />
+	<arg name="namespace" default="$(arg ethernet_interface)" />
+	<arg name="udp_com_name" default="udp" />
+	
+
+
+
+	<group ns="$(arg ethernet_interface)">
+		<!-- Nodelet Manager -->
+		<node pkg="nodelet" type="nodelet" name="$(arg manager_name)" args="manager" output="screen" />
+
+		<!-- UDP COM Nodelet -->
+		<node pkg="nodelet" type="nodelet" name="$(arg udp_com_name)" args="load udp_com/UdpComNodelet $(arg manager_name)" output="screen">
+
+			<!-- UDP PORTS -->
+			<!-- <rosparam param="udp_ports" subst_value="true">$(arg udp_ports)</rosparam>	-->
+			<!-- CAMERA ADDRESSES -->
+			<!-- <rosparam param="camera_addresses" subst_value="true">$(arg camera_addresses)</rosparam> -->
+			<!-- COMPUTER ADDRESSES -->
+			<!-- <rosparam param="computer_addresses" subst_value="true">$(arg computer_addresses)</rosparam> -->
+		</node>
+	</group>
+
+</launch>
+
+
+	

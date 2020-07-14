@@ -1,0 +1,6 @@
+<map id="include/udp_com.h" name="include/udp_com.h">
+<area shape="rect" id="node1" title="Implements the UDP methods for recieving and sending within the ROS ecosystem." alt="" coords="118,5,249,32"/>
+<area shape="rect" id="node2" href="$udp__com__nodelet_8h.html" title="Implements the create_socket and send ROS services." alt="" coords="5,80,185,107"/>
+<area shape="rect" id="node4" href="$udp__com_8cpp.html" title="This file implements the udp_com class methods." alt="" coords="210,80,333,107"/>
+<area shape="rect" id="node3" href="$udp__com__nodelet_8cpp.html" title="This file implements the udp_com_nodelet class methods." alt="" coords="10,155,181,181"/>
+</map>

@@ -1,0 +1,7 @@
+string address
+uint16 srcPort
+uint16 dstPort
+uint8[] data
+---
+bool sent
+bool socketCreated
