@@ -1,0 +1,22 @@
+name: ROS CI
+
+on: [push, pull_request]   # run on all pushes & PR's for every branch
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: setup directories
+      run: mkdir -p catkin_ws/src
+    - name: checkout
+      uses: actions/checkout@v2
+      with:
+        path: catkin_ws/src
+    - name: setup ROS environment
+      uses: ros-tooling/setup-ros@0.0.25
+      with:
+        required-ros-distributions: melodic
+    - name: build and test
+      run: "source /opt/ros/melodic/setup.bash && cd catkin_ws/ && catkin_make run_tests"
