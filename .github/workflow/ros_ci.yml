@@ -2,8 +2,7 @@ name: ROS CI
 
 on:
   pull_request:
-    branches: [ master ]
-
+    branches: '**'  # run on all PR's for every branch
 jobs:
   build:
 
@@ -21,4 +20,4 @@ jobs:
       with:
         required-ros-distributions: melodic
     - name: build and test
-      run: "source /opt/ros/melodic/setup.bash && cd catkin_ws/ && catkin_make"
+      run: "source /opt/ros/melodic/setup.bash && cd catkin_ws/ && catkin_make run_tests"
