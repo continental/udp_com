@@ -17,4 +17,4 @@ jobs:
       with:
         required-ros-distributions: melodic
     - name: build and test
-      run: "source /opt/ros/melodic/setup.bash && catkin_make"
+      run: "source /opt/ros/melodic/setup.bash && cd ../../ && catkin_make"
