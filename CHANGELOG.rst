@@ -2,8 +2,8 @@
 Changelog for package udp_com
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.3 (2020-07-15)
+------------------
 * fix typo
 * Merge pull request `#9 <https://github.com/continental/udp_com/issues/9>`_ from continental/release-candidate
 * add release candidate workflow
