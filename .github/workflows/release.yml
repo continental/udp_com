@@ -1,0 +1,26 @@
+name: Release
+
+on:
+ push:
+    paths:
+      - package.xml
+      - 'package.xml'
+    branches:
+      - master
+
+jobs:
+  bloom-release:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: checkout repo
+      uses: actions/checkout@v2
+    - name: Bloom release ROS package
+      uses: at-wat/bloom-release-action@v0.0.8
+      with:
+        ros_distro: kinetic melodic noetic
+        github_token_bloom: ${{ secrets.BLOOM_RELEASE_TOKEN }}
+        github_user: flynneva
+        git_user: Evan Flynn
+        git_email: evanflynn.msu@gmail.com
+        tag_and_release: true
