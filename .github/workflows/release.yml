@@ -15,7 +15,7 @@ jobs:
     steps:
     - name: checkout repo
       uses: actions/checkout@v2
-    - name: Bloom release ROS package
+    - name: bloom_release
       uses: at-wat/bloom-release-action@v0.0.8
       with:
         ros_distro: kinetic melodic noetic
