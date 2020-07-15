@@ -1,0 +1,4 @@
+<map id="include/udp_com_nodelet.h" name="include/udp_com_nodelet.h">
+<area shape="rect" id="node1" title="Implements the create_socket and send ROS services." alt="" coords="5,5,185,32"/>
+<area shape="rect" id="node2" href="$udp__com__nodelet_8cpp.html" title="This file implements the udp_com_nodelet class methods." alt="" coords="10,80,181,107"/>
+</map>

@@ -1,0 +1,146 @@
+\hypertarget{classudp__com_1_1UdpComNodelet}{}\doxysection{udp\+\_\+com\+::Udp\+Com\+Nodelet Class Reference}
+\label{classudp__com_1_1UdpComNodelet}\index{udp\_com::UdpComNodelet@{udp\_com::UdpComNodelet}}
+
+
+Implements the udp\+\_\+com create\+\_\+socket and send services.  
+
+
+
+
+{\ttfamily \#include $<$udp\+\_\+com\+\_\+nodelet.\+h$>$}
+
+
+
+Inheritance diagram for udp\+\_\+com\+::Udp\+Com\+Nodelet\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{classudp__com_1_1UdpComNodelet__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for udp\+\_\+com\+::Udp\+Com\+Nodelet\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{classudp__com_1_1UdpComNodelet__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classudp__com_1_1UdpComNodelet_ad9a002e66197584017997b69fea83546}{Udp\+Com\+Nodelet}} ()
+\item 
+\mbox{\hyperlink{classudp__com_1_1UdpComNodelet_a3f1a974b0c0b1bf5febfe52ca4224a25}{$\sim$\+Udp\+Com\+Nodelet}} ()
+\item 
+void \mbox{\hyperlink{classudp__com_1_1UdpComNodelet_ac5e151fc63bc76f660b21d9f64ab3044}{on\+Init}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classudp__com_1_1UdpComNodelet_a78712c2221ff346578d499b5727cd8fe}{send}} (Udp\+Send\+::\+Request \&request, Udp\+Send\+::\+Response \&)
+\item 
+bool \mbox{\hyperlink{classudp__com_1_1UdpComNodelet_a66fa3856ff4e2f900c97d2d3e4b77aae}{create\+Socket}} (Udp\+Socket\+::\+Request \&request, Udp\+Socket\+::\+Response \&response)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classudp__com_1_1UdpComNodelet_a16e1557df2fa0b2150bc24e2de7ec875}\label{classudp__com_1_1UdpComNodelet_a16e1557df2fa0b2150bc24e2de7ec875}} 
+ros\+::\+Service\+Server \mbox{\hyperlink{classudp__com_1_1UdpComNodelet_a16e1557df2fa0b2150bc24e2de7ec875}{send\+\_\+service\+\_\+}}
+\begin{DoxyCompactList}\small\item\em R\+OS send service. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classudp__com_1_1UdpComNodelet_ad5b6e091646c48a1f1894f4bd4c93841}\label{classudp__com_1_1UdpComNodelet_ad5b6e091646c48a1f1894f4bd4c93841}} 
+ros\+::\+Service\+Server \mbox{\hyperlink{classudp__com_1_1UdpComNodelet_ad5b6e091646c48a1f1894f4bd4c93841}{create\+\_\+socket\+\_\+service\+\_\+}}
+\begin{DoxyCompactList}\small\item\em R\+OS socket creation service. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classudp__com_1_1UdpComNodelet_a8975ba2cf8ebed51f1b1761c2180a3af}\label{classudp__com_1_1UdpComNodelet_a8975ba2cf8ebed51f1b1761c2180a3af}} 
+ros\+::\+Node\+Handle \mbox{\hyperlink{classudp__com_1_1UdpComNodelet_a8975ba2cf8ebed51f1b1761c2180a3af}{node\+\_\+handler\+\_\+}}
+\begin{DoxyCompactList}\small\item\em R\+OS node handle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classudp__com_1_1UdpComNodelet_aeafeaf1214f794d3d29f5d62f8286e90}\label{classudp__com_1_1UdpComNodelet_aeafeaf1214f794d3d29f5d62f8286e90}} 
+std\+::map$<$ uint16\+\_\+t, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classudp__com_1_1UdpCom}{Udp\+Com}} $>$ $>$ \mbox{\hyperlink{classudp__com_1_1UdpComNodelet_aeafeaf1214f794d3d29f5d62f8286e90}{udp\+\_\+sockets\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Map of all the created U\+DP Sockets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implements the udp\+\_\+com create\+\_\+socket and send services. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classudp__com_1_1UdpComNodelet_ad9a002e66197584017997b69fea83546}\label{classudp__com_1_1UdpComNodelet_ad9a002e66197584017997b69fea83546}} 
+\index{udp\_com::UdpComNodelet@{udp\_com::UdpComNodelet}!UdpComNodelet@{UdpComNodelet}}
+\index{UdpComNodelet@{UdpComNodelet}!udp\_com::UdpComNodelet@{udp\_com::UdpComNodelet}}
+\doxysubsubsection{\texorpdfstring{UdpComNodelet()}{UdpComNodelet()}}
+{\footnotesize\ttfamily udp\+\_\+com\+::\+Udp\+Com\+Nodelet\+::\+Udp\+Com\+Nodelet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Initializer constructor. \mbox{\Hypertarget{classudp__com_1_1UdpComNodelet_a3f1a974b0c0b1bf5febfe52ca4224a25}\label{classudp__com_1_1UdpComNodelet_a3f1a974b0c0b1bf5febfe52ca4224a25}} 
+\index{udp\_com::UdpComNodelet@{udp\_com::UdpComNodelet}!````~UdpComNodelet@{$\sim$UdpComNodelet}}
+\index{````~UdpComNodelet@{$\sim$UdpComNodelet}!udp\_com::UdpComNodelet@{udp\_com::UdpComNodelet}}
+\doxysubsubsection{\texorpdfstring{$\sim$UdpComNodelet()}{~UdpComNodelet()}}
+{\footnotesize\ttfamily udp\+\_\+com\+::\+Udp\+Com\+Nodelet\+::$\sim$\+Udp\+Com\+Nodelet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Initialize destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classudp__com_1_1UdpComNodelet_a66fa3856ff4e2f900c97d2d3e4b77aae}\label{classudp__com_1_1UdpComNodelet_a66fa3856ff4e2f900c97d2d3e4b77aae}} 
+\index{udp\_com::UdpComNodelet@{udp\_com::UdpComNodelet}!createSocket@{createSocket}}
+\index{createSocket@{createSocket}!udp\_com::UdpComNodelet@{udp\_com::UdpComNodelet}}
+\doxysubsubsection{\texorpdfstring{createSocket()}{createSocket()}}
+{\footnotesize\ttfamily bool udp\+\_\+com\+::\+Udp\+Com\+Nodelet\+::create\+Socket (\begin{DoxyParamCaption}\item[{Udp\+Socket\+::\+Request \&}]{request,  }\item[{Udp\+Socket\+::\+Response \&}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Socket creation service function
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em request} & U\+DP service request \\
+\hline
+\mbox{\texttt{ in}}  & {\em response} & U\+DP service response\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if socket was created
+\end{DoxyReturn}
+Socket creation service function
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em request} & U\+DP service request \\
+\hline
+\mbox{\texttt{ in}}  & {\em response} & U\+DP service response\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true if request done 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classudp__com_1_1UdpComNodelet_ac5e151fc63bc76f660b21d9f64ab3044}\label{classudp__com_1_1UdpComNodelet_ac5e151fc63bc76f660b21d9f64ab3044}} 
+\index{udp\_com::UdpComNodelet@{udp\_com::UdpComNodelet}!onInit@{onInit}}
+\index{onInit@{onInit}!udp\_com::UdpComNodelet@{udp\_com::UdpComNodelet}}
+\doxysubsubsection{\texorpdfstring{onInit()}{onInit()}}
+{\footnotesize\ttfamily void udp\+\_\+com\+::\+Udp\+Com\+Nodelet\+::on\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Nodelet initalization function
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classudp__com_1_1UdpComNodelet_a78712c2221ff346578d499b5727cd8fe}\label{classudp__com_1_1UdpComNodelet_a78712c2221ff346578d499b5727cd8fe}} 
+\index{udp\_com::UdpComNodelet@{udp\_com::UdpComNodelet}!send@{send}}
+\index{send@{send}!udp\_com::UdpComNodelet@{udp\_com::UdpComNodelet}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily bool udp\+\_\+com\+::\+Udp\+Com\+Nodelet\+::send (\begin{DoxyParamCaption}\item[{Udp\+Send\+::\+Request \&}]{request,  }\item[{Udp\+Send\+::\+Response \&}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Send service function
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em request} & U\+DP service request \\
+\hline
+\mbox{\texttt{ in}}  & {\em response} & U\+DP service response\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if request was sent 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{udp__com__nodelet_8h}{udp\+\_\+com\+\_\+nodelet.\+h}}\item 
+src/\mbox{\hyperlink{udp__com__nodelet_8cpp}{udp\+\_\+com\+\_\+nodelet.\+cpp}}\end{DoxyCompactItemize}
