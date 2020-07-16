@@ -2,8 +2,9 @@
 Changelog for package udp_com
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.0.6 (2020-07-16)
-------------------
+Forthcoming
+-----------
+* switched branch to ros1-devel
 * change branch name to ros1-devel
 * switched destination branch to melodic-devel
 * Contributors: Evan Flynn
