@@ -6,7 +6,7 @@ on:
       - package.xml
       - 'package.xml'
     branches:
-      - main
+      - ros1-devel
 
 jobs:
   bloom-release:
