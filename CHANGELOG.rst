@@ -2,8 +2,8 @@
 Changelog for package udp_com
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.8 (2020-07-24)
+------------------
 * Merge pull request `#18 <https://github.com/continental/udp_com/issues/18>`_ from continental/version_updates
 * updated version & added Max as author
 * switched branch to ros1-devel
