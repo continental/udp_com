@@ -3,10 +3,8 @@ name: ROS CI
 on: pull_request   # run on all pushes & PR's for every branch
 
 jobs:
-  build_docker:
+  build:
     runs-on: ubuntu-latest
-    container:
-      image: ubuntu:bionic
     steps:
     - name: setup directories
       run: mkdir -p catkin_ws/src
