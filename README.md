@@ -1,4 +1,4 @@
-# UDP Communication ROS Package
+# UDP Communication ![ROS CI](https://github.com/continental/udp_com/workflows/ROS%20CI/badge.svg)
 This package was designed as a generic package to assist with interfacing ROS with the UDP transport layer. It provides ROS Services for creating sockets, sending and receiving UDP data.
 
 **Supported platforms/releases**:
