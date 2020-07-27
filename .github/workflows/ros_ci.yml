@@ -4,9 +4,7 @@ on: pull_request   # run on all pushes & PR's for every branch
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - name: setup directories
       run: mkdir -p catkin_ws/src
