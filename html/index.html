@@ -86,11 +86,14 @@ $(function() {
 <li><b>create_socket_service</b>: creates a UDP socket and creates an instance to receive/send data</li>
 <li><b>send_service</b>: creates a ROS service to send data to a specific socket</li>
 </ul>
-<p>Please <a href="https://github.conti.de/pages/ADAS-LIDAR/udp_com/html/index.html">review the source code documentation</a> for more details on how the project is structured.</p>
+<p>Please <a href="https://continental.github.io/udp_com/html/index.html">review the source code documentation</a> for more details on how the project is structured.</p>
 <h2>Getting started</h2>
-<p>For anyone already familiar with ROS, please see how this package is <a href="https://github.conti.de/ADAS-LIDAR/hfl_ros">utilized and implemented in the hfl_driver package</a>.</p>
+<p>For anyone already familiar with ROS, please see how this package is <a href="https://github.com/continental/hfl_driver.git">utilized and implemented in the hfl_driver package</a>.</p>
 <p>First, make sure your using the targeted platform and releases listed above.</p>
-<p>Go ahead and clone this repo: </p><div class="fragment"><div class="line">git clone https://github.conti.de/ADAS-LIDAR/udp_com</div>
+<p>Go ahead and clone this repo into your <code>catkin_ws</code>: </p><div class="fragment"><div class="line">git clone https://github.com/continental/udp_com.git</div>
+</div><!-- fragment --><p>Next, from your <code>catkin_ws</code> directory compile the source code: </p><div class="fragment"><div class="line">catkin_make</div>
+</div><!-- fragment --><p>After successful compilation source your newly generated workspace: </p><div class="fragment"><div class="line">source /path/to/catkin_ws/devel/setup.bash</div>
+</div><!-- fragment --><p>And now you should be able to run the <code>udp_com</code> launch file: </p><div class="fragment"><div class="line">roslaunch udp_com udp_com.launch</div>
 </div><!-- fragment --> </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->

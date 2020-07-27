@@ -33,16 +33,34 @@ In either case, the udp\+\_\+com package provides R\+OS services for interfacing
 \item {\bfseries{send\+\_\+service}}\+: creates a R\+OS service to send data to a specific socket
 \end{DoxyItemize}
 
-Please \href{https://github.conti.de/pages/ADAS-LIDAR/udp_com/html/index.html}{\texttt{ review the source code documentation}} for more details on how the project is structured.
+Please \href{https://continental.github.io/udp_com/html/index.html}{\texttt{ review the source code documentation}} for more details on how the project is structured.
 
 \doxysubsection*{Getting started}
 
-For anyone already familiar with R\+OS, please see how this package is \href{https://github.conti.de/ADAS-LIDAR/hfl_ros}{\texttt{ utilized and implemented in the hfl\+\_\+driver package}}.
+For anyone already familiar with R\+OS, please see how this package is \href{https://github.com/continental/hfl_driver.git}{\texttt{ utilized and implemented in the hfl\+\_\+driver package}}.
 
 First, make sure your using the targeted platform and releases listed above.
 
-Go ahead and clone this repo\+: 
+Go ahead and clone this repo into your {\ttfamily catkin\+\_\+ws}\+: 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{git clone https://github.conti.de/ADAS-\/LIDAR/udp\_com}
+\DoxyCodeLine{git clone https://github.com/continental/udp\_com.git}
+\end{DoxyCode}
+
+
+Next, from your {\ttfamily catkin\+\_\+ws} directory compile the source code\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{catkin\_make}
+\end{DoxyCode}
+
+
+After successful compilation source your newly generated workspace\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{source /path/to/catkin\_ws/devel/setup.bash}
+\end{DoxyCode}
+
+
+And now you should be able to run the {\ttfamily udp\+\_\+com} launch file\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{roslaunch udp\_com udp\_com.launch}
 \end{DoxyCode}
  
