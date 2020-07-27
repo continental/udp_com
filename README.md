@@ -17,15 +17,29 @@ In either case, the udp_com package provides ROS services for interfacing with t
 - **create_socket_service**: creates a UDP socket and creates an instance to receive/send data
 - **send_service**: creates a ROS service to send data to a specific socket
 
-Please [review the source code documentation](https://github.conti.de/pages/ADAS-LIDAR/udp_com/html/index.html) for more details on how the project is structured.
+Please [review the source code documentation](https://continental.github.io/udp_com/html/index.html) for more details on how the project is structured.
 
 ### Getting started
-For anyone already familiar with ROS, please see how this package is [utilized and implemented in the hfl_driver package](https://github.conti.de/ADAS-LIDAR/hfl_ros).
+For anyone already familiar with ROS, please see how this package is [utilized and implemented in the hfl_driver package](https://github.com/continental/hfl_driver.git).
 
 First, make sure your using the targeted platform and releases listed above.
 
-Go ahead and clone this repo:
+Go ahead and clone this repo into your `catkin_ws`:
 ```
-git clone https://github.conti.de/ADAS-LIDAR/udp_com
+git clone https://github.com/continental/udp_com.git
 ```
 
+Next, from your `catkin_ws` directory compile the source code:
+```
+catkin_make
+```
+
+After successful compilation source your newly generated workspace:
+```
+source /path/to/catkin_ws/devel/setup.bash
+```
+
+And now you should be able to run the `udp_com` launch file:
+```
+roslaunch udp_com udp_com.launch
+```
