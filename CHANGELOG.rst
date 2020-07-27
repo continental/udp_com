@@ -2,6 +2,18 @@
 Changelog for package udp_com
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.0.8 (2020-07-24)
+------------------
+* Merge pull request `#18 <https://github.com/continental/udp_com/issues/18>`_ from continental/version_updates
+* updated version & added Max as author
+
+0.0.6 (2020-07-16)
+------------------
+* switched branch to ros1-devel
+* change branch name to ros1-devel
+* switched destination branch to melodic-devel
+* Contributors: Evan Flynn
+
 0.0.4 (2020-07-15)
 ------------------
 * test release
