@@ -6,6 +6,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: get repo name
+      run: echo ::set-env name=REPOSITORY_NAME::$(echo "$GITHUB_REPOSITORY" | awk -F / '{print $2}' | sed -e "s/:refs//")
+      shell: bash
     - name: setup directories
       run: mkdir -p catkin_ws/src
     - name: checkout
@@ -21,4 +24,4 @@ jobs:
     - name: install catkin_ws dependencies
       run: "source /opt/ros/melodic/setup.bash && cd catkin_ws/ && rosdep install --from-paths src --ignore-src -r -y"
     - name: build and test
-      run: "source /opt/ros/melodic/setup.bash && cd catkin_ws/ && catkin_make run_tests"
+      run: "source /opt/ros/melodic/setup.bash && cd catkin_ws/ && catkin_make run_tests roslint_$REPOSITORY_NAME"
