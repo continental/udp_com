@@ -11,13 +11,14 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
         with:
+          # checkout branch specified in issue body
           ref: ${{ github.event.issue.body }}
       - name: create release
         id: create_release
         uses: at-wat/catkin-release-action@v1
         with:
           issue_title: ${{ github.event.issue.title }}
-          git_user: Evan Flynn
+          git_user: flynneva
           git_email: evanflynn.msu@gmail.com
           github_token: ${{ secrets.BLOOM_RELEASE_TOKEN }}
       - name: open ROS 1 pull-request
