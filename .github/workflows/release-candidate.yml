@@ -19,7 +19,7 @@ jobs:
           issue_title: ${{ github.event.issue.title }}
           git_user: Evan Flynn
           git_email: evanflynn.msu@gmail.com
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.BLOOM_RELEASE_TOKEN }}
       - name: open ROS 1 pull-request
         if: contains(github.event.issue.title, 'ros1')
         uses: repo-sync/pull-request@v2
@@ -29,7 +29,7 @@ jobs:
           pr_title: Release ${{ steps.create_release.outputs.version}}
           pr_body: close \#${{ github.event.issue.number }}
           pr_assignee: ${{ github.actor }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.BLOOM_RELEASE_TOKEN }}
       - name: open ROS 2 pull-request
         if: contains(github.event.issue.title, 'ros2')
         uses: repo-sync/pull-request@v2
@@ -39,4 +39,4 @@ jobs:
           pr_title: Release ${{ steps.create_release.outputs.version}}
           pr_body: close \#${{ github.event.issue.number }}
           pr_assignee: ${{ github.actor }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.BLOOM_RELEASE_TOKEN }}
