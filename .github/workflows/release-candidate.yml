@@ -10,9 +10,12 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-        #with:
-          # checkout branch specified in issue body
-          #ref: ${{ github.event.issue.body }}
+        with:
+          checkout branch specified in issue body
+          ref: ${{ github.event.issue.body }}
+      - name: echo GITHUB_REF
+        run: "echo $GITHUB_REF"
+        shell: bash
       - name: create release
         id: create_release
         uses: at-wat/catkin-release-action@v1
