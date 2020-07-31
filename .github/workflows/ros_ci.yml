@@ -24,4 +24,4 @@ jobs:
     - name: install catkin_ws dependencies
       run: "source /opt/ros/melodic/setup.bash && cd catkin_ws/ && rosdep install --from-paths src --ignore-src -r -y"
     - name: build and test
-      run: "source /opt/ros/melodic/setup.bash && cd catkin_ws/ && catkin_make run_tests roslint_$REPOSITORY_NAME"
+      run: "source /opt/ros/melodic/setup.bash && cd catkin_ws/ && catkin_make run_tests roslint_" + $REPOSITORY_NAME
