@@ -10,9 +10,9 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-        with:
+        #with:
           # checkout branch specified in issue body
-          ref: ${{ github.event.issue.body }}
+          #ref: ${{ github.event.issue.body }}
       - name: create release
         id: create_release
         uses: at-wat/catkin-release-action@v1
