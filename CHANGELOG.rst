@@ -2,8 +2,8 @@
 Changelog for package udp_com
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.3 (2020-08-02)
+------------------
 * fixed create PR bug
 * updated action to new version
 * Merge branch 'main' into ros1-devel
