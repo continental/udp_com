@@ -2,6 +2,19 @@
 Changelog for package udp_com
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.3 (2020-08-02)
+------------------
+* fixed create PR bug
+* updated action to new version
+* Merge branch 'main' into ros1-devel
+* fixed typo
+* testing what github ref is
+* removed branch checkout
+* Merge pull request `#36 <https://github.com/continental/udp_com/issues/36>`_ from continental/ros1-devel
+* Merge pull request `#27 <https://github.com/continental/udp_com/issues/27>`_ from continental/ros1-devel
+* Merge pull request `#26 <https://github.com/continental/udp_com/issues/26>`_ from continental/ros1-devel
+* Contributors: Evan Flynn
+
 0.0.8 (2020-07-24)
 ------------------
 * Merge pull request `#18 <https://github.com/continental/udp_com/issues/18>`_ from continental/version_updates
