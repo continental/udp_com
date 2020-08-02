@@ -24,7 +24,7 @@ jobs:
           git_email: evanflynn.msu@gmail.com
           github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: open ROS 1 pull-request
-        if: contains(github.event.issue.title, 'ros1')
+        if: contains(github.event.issue.body, 'ros1')
         uses: repo-sync/pull-request@v2
         with:
           source_branch: ${{ steps.create_release.outputs.created_branch }}
@@ -34,7 +34,7 @@ jobs:
           pr_assignee: ${{ github.actor }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: open ROS 2 pull-request
-        if: contains(github.event.issue.title, 'ros2')
+        if: contains(github.event.issue.body, 'ros2')
         uses: repo-sync/pull-request@v2
         with:
           source_branch: ${{ steps.create_release.outputs.created_branch }}
