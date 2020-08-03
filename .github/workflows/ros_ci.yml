@@ -23,7 +23,7 @@ jobs:
           - docker_image: ubuntu:bionic
             ros_distribution: melodic
             ros_version: 1
-            # Noetic Ninjemys (May 2020 - May 20225)
+            # Noetic Ninjemys (May 2020 - May 2025)
           - docker_image: ubuntu:focal
             ros_distribution: noetic
             ros_version: 1
@@ -46,5 +46,5 @@ jobs:
       - name: build and test
         uses: ros-tooling/action-ros-ci@0.0.17
         with:
-          package-name: udp_com  # TODO: auto-set from repo name?
-          target-ros1-distro: ${{ matrix.ros_distribution }}
+          package-name: '$REPOSITORY_NAME'
+          source-ros-binary-installation: ${{ matrix.ros_distribution }}
