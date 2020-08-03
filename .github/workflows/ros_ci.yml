@@ -47,4 +47,5 @@ jobs:
         uses: ros-tooling/action-ros-ci@0.0.17
         with:
           package-name: udp_com
-          source-ros-binary-installation: ${{ matrix.ros_distribution }}
+          target-ros1-distro: ${{ matrix.ros_distribution }}
+          target-ros2-distro: foxy
