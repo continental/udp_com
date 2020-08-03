@@ -1,29 +1,51 @@
-name: ROS CI
+name: ROS 1 CI
 
-on: pull_request   # run on all pushes & PR's for every branch
-
+on:
+  pull_request:
+    branches:
+      - 'ros1*'
 jobs:
-  build:
+  test_environment-linux
+    test_environment_linux:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        ros_distribution:
+          - kinetic
+          - melodic
+          - noetic
+        include:
+            # Kinetic Kame (May 2016 - May 2021)
+          - docker_image: ubuntu:xenial
+            ros_distribution: kinetic
+            ros_version: 1
+            # Melodic Morenia (May 2018 - May 2023)
+          - docker_image: ubuntu:bionic
+            ros_distribution: melodic
+            ros_version: 1
+            # Noetic Ninjemys (May 2020 - May 20225)
+          - docker_image: ubuntu:focal
+            ros_distribution: noetic
+            ros_version: 1
+    container:
+      image: ${{ matrix.docker_image }}
     steps:
-    - name: get repo name
-      run: echo ::set-env name=REPOSITORY_NAME::$(echo "$GITHUB_REPOSITORY" | awk -F / '{print $2}' | sed -e "s/:refs//")
-      shell: bash
-    - name: setup directories
-      run: mkdir -p catkin_ws/src
-    - name: checkout
-      uses: actions/checkout@v2
-      with:
-        path: catkin_ws/src
-    - name: setup ROS environment
-      uses: ros-tooling/setup-ros@0.0.25
-      with:
-        required-ros-distributions: melodic
-    - name: update rosdep
-      run: rosdep update
-    - name: install catkin_ws dependencies
-      run: "source /opt/ros/melodic/setup.bash && cd catkin_ws/ && rosdep install --from-paths src --ignore-src -r -y"
-      shell: bash
-    - name: build and test
-      run: "source /opt/ros/melodic/setup.bash && cd catkin_ws/ && catkin_make run_tests roslint_$REPOSITORY_NAME"
-      shell: bash
+      - name: get repo name
+        run: echo ::set-env name=REPOSITORY_NAME::$(echo "$GITHUB_REPOSITORY" | awk -F / '{print $2}' | sed -e "s/:refs//")
+        shell: bash
+      - name: setup directories
+        run: mkdir -p catkin_ws/src
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          path: catkin_ws/src
+      - name: setup ROS environment
+        uses: ros-tooling/setup-ros@0.0.25
+        with:
+          required-ros-distributions: ${{ matrix.ros_distribution }}
+      - name: build and test
+        uses: ros-tooling/action-ros-ci@0.0.17
+        with:
+          package-name: udp_com  # TODO: auto-set from repo name?
+          target-ros1-distro: ${{ matrix.ros_distribution }}
