@@ -46,12 +46,12 @@ jobs:
       - name: update rosdep
         run: rosdep update
       - name: install catkin_ws dependencies
-        run: "source /opt/ros/$DISTRO/setup.bash && cd catkin_ws/ && rosdep install --from-paths src --ignore-src -r -y"
+        run: "source /opt/ros/$DISTRO/setup.bash && cd ros_ws/ && rosdep install --from-paths src --ignore-src -r -y"
         env:
           DISTRO: ${{ matrix.ros_distribution }}
         shell: bash
       - name: build and test
-        run: "source /opt/ros/$DISTRO/setup.bash && cd catkin_ws/ && catkin_make run_tests roslint_$REPOSITORY_NAME"
+        run: "source /opt/ros/$DISTRO/setup.bash && cd ros_ws/ && catkin_make run_tests roslint_$REPOSITORY_NAME"
         env:
           DISTRO: ${{ matrix.ros_distribution }}
         shell: bash
