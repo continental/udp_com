@@ -5,8 +5,7 @@ on:
     branches:
       - 'ros1*'
 jobs:
-  test_environment-linux
-    test_environment_linux:
+  test_environment-linux:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
