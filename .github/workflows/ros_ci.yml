@@ -34,11 +34,11 @@ jobs:
         run: echo ::set-env name=REPOSITORY_NAME::$(echo "$GITHUB_REPOSITORY" | awk -F / '{print $2}' | sed -e "s/:refs//")
         shell: bash
       - name: setup directories
-        run: mkdir -p src
+        run: mkdir -p ros_ws/src
       - name: checkout
         uses: actions/checkout@v2
         with:
-          path: src
+          path: ros_ws/src
       - name: setup ROS environment
         uses: ros-tooling/setup-ros@0.0.25
         with:
