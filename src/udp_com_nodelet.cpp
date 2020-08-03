@@ -9,6 +9,7 @@
  * All rights reserved.
  */
 
+#include <memory>
 #include <udp_com_nodelet.h>
 #include <pluginlib/class_list_macros.h>
 

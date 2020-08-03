@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.5)
 
 # Appends the cmake/modules path to MAKE_MODULE_PATH variable.
 project(udp_com
