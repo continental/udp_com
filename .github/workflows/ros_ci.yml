@@ -43,9 +43,10 @@ jobs:
         uses: ros-tooling/setup-ros@0.0.25
         with:
           required-ros-distributions: ${{ matrix.ros_distribution }}
+      - name: test dir
+        run: ls 
       - name: build and test
         uses: ros-tooling/action-ros-ci@0.0.17
         with:
           package-name: udp_com
-          target-ros1-distro: ${{ matrix.ros_distribution }}
-          target-ros2-distro: foxy
+          source-ros-binary-installation: ${{ matrix.ros_distribution }}
