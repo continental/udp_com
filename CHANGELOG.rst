@@ -40,6 +40,9 @@ Changelog for package udp_com
 1.0.7 (2020-08-04)
 ------------------
 * trying to fix release action
+
+1.0.6 (2020-08-04)
+------------------
 * Merge branch 'ros1/devel' of github.com:continental/udp_com into ros1/devel
 * trying to fix release action
 * Merge pull request `#58 <https://github.com/continental/udp_com/issues/58>`_ from continental/release-1.0.5
