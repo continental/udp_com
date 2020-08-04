@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>udp_com</name>
-  <version>1.0.8</version>
-
+  <version>1.0.9</version>
   <description>The udp_com package</description>
 
   <maintainer email="evan.flynn@continental.com">Evan Flynn</maintainer>
