@@ -24,6 +24,7 @@ jobs:
         git_user: Evan Flynn
         git_email: evanflynn.msu@gmail.com
         tag_and_release: true
+        release_repository_push_url: https://github.com/${{ github.repository }}-release.git
     - name: create release
       uses: actions/create-release@v1
       with:
