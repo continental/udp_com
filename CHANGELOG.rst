@@ -2,8 +2,8 @@
 Changelog for package udp_com
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.4 (2020-08-04)
+------------------
 * Merge pull request `#51 <https://github.com/continental/udp_com/issues/51>`_ from continental/all_platorms_ci
 * removed cmake description
 * fixed testing errors
