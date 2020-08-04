@@ -14,6 +14,7 @@
 
 #include <udp_com.h>
 #include <map>
+#include <memory>
 #include <nodelet/nodelet.h>
 #include <ros/console.h>
 #include <ros/ros.h>
