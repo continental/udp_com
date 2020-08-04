@@ -6,6 +6,9 @@ Changelog for package udp_com
 ------------------
 * Merge pull request `#54 <https://github.com/continental/udp_com/issues/54>`_ from continental/all_platorms_ci
 * switched to ros1/ branch naming structure
+
+1.0.4 (2020-08-04)
+------------------
 * Merge pull request `#51 <https://github.com/continental/udp_com/issues/51>`_ from continental/all_platorms_ci
 * removed cmake description
 * fixed testing errors
@@ -20,6 +23,9 @@ Changelog for package udp_com
 * change how ci sources ros install
 * fixed typo
 * trying to run ci on all ROS1 platforms
+
+1.0.3 (2020-08-02)
+------------------
 * fixed create PR bug
 * updated action to new version
 * Merge branch 'main' into ros1-devel
