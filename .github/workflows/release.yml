@@ -19,7 +19,6 @@ jobs:
       uses: at-wat/bloom-release-action@v0.0.8
       with:
         ros_distro: kinetic melodic noetic
-        release_repository_push_url: https://github.com/flynneva/udp_com-release.git
         github_token_bloom: ${{ secrets.BLOOM_RELEASE_TOKEN }}
         github_user: flynneva
         git_user: Evan Flynn
