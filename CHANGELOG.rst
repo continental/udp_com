@@ -2,8 +2,8 @@
 Changelog for package udp_com
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.5 (2020-08-04)
+------------------
 * Merge pull request `#54 <https://github.com/continental/udp_com/issues/54>`_ from continental/all_platorms_ci
 * switched to ros1/ branch naming structure
 * Merge pull request `#51 <https://github.com/continental/udp_com/issues/51>`_ from continental/all_platorms_ci
