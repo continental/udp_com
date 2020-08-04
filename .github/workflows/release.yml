@@ -11,12 +11,12 @@ on:
 jobs:
   bloom-release:
     runs-on: ubuntu-latest
-    
     steps:
     - name: checkout repo
       uses: actions/checkout@v2
     - name: bloom_release
-      uses: at-wat/bloom-release-action@v0.0.8
+      id: bloom
+      uses: at-wat/bloom-release-action@v0
       with:
         ros_distro: kinetic melodic noetic
         github_token_bloom: ${{ secrets.BLOOM_RELEASE_TOKEN }}
@@ -24,11 +24,11 @@ jobs:
         git_user: Evan Flynn
         git_email: evanflynn.msu@gmail.com
         tag_and_release: true
-        release_repository_push_url: https://github.com/${{ github.repository }}-release.git
-    - name: create release
+        release_repository_push_url: https://github.com/flynneva/udp_com-release.git
+    - name: create github release
       uses: actions/create-release@v1
       with:
-        tag_name: ${{ steps.bloom_release.outputs.version }}
-        release_name: ${{ steps.bloom_release.outputs.version }}
+        tag_name: ${{ steps.bloom.outputs.version }}
+        release_name: ${{ steps.bloom.outputs.version }}
       env:
         GITHUB_TOKEN: ${{ secrets.BLOOM_RELEASE_TOKEN }}
