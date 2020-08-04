@@ -18,6 +18,9 @@ Changelog for package udp_com
 * change how ci sources ros install
 * fixed typo
 * trying to run ci on all ROS1 platforms
+
+1.0.3 (2020-08-02)
+------------------
 * fixed create PR bug
 * updated action to new version
 * Merge branch 'main' into ros1-devel
