@@ -3,7 +3,7 @@ name: ROS 1 CI
 on:
   pull_request:
     branches:
-      - 'ros1*'
+      - 'ros1/*'
 jobs:
   test_environment-linux:
     runs-on: ubuntu-latest
