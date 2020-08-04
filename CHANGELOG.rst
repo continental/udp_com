@@ -37,8 +37,8 @@ Changelog for package udp_com
 * Merge pull request `#26 <https://github.com/continental/udp_com/issues/26>`_ from continental/ros1-devel
 * Contributors: Evan Flynn
 
-Forthcoming
------------
+1.0.8 (2020-08-04)
+------------------
 * Merge pull request `#64 <https://github.com/continental/udp_com/issues/64>`_ from continental/ros1/main
 * changed remote url
 * Contributors: Evan Flynn
