@@ -1,8 +1,7 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.5)
 
 # Appends the cmake/modules path to MAKE_MODULE_PATH variable.
-project(udp_com
-  DESCRIPTION "A generic ROS package for interfacing with UDP sockets")
+project(udp_com)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 add_compile_options(-std=c++11)
