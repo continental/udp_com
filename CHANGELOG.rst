@@ -12,6 +12,14 @@ Changelog for package udp_com
 * changed remote url
 * Contributors: Evan Flynn
 
+1.1.0 (2020-08-05)
+------------------
+* create pr to rosdistro
+* remove docs from non-docs branches
+* Merge pull request `#64 <https://github.com/continental/udp_com/issues/64>`_ from continental/ros1/main
+* changed remote url
+* Contributors: Evan Flynn
+
 1.0.7 (2020-08-04)
 ------------------
 * trying to fix release action
