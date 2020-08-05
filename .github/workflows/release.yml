@@ -20,11 +20,12 @@ jobs:
       with:
         ros_distro: kinetic melodic noetic
         github_token_bloom: ${{ secrets.BLOOM_RELEASE_TOKEN }}
+        release_repository_push_url: https://github.com/flynneva/udp_com-release.git
         github_user: flynneva
         git_user: Evan Flynn
         git_email: evanflynn.msu@gmail.com
         tag_and_release: true
-        release_repository_push_url: https://github.com/flynneva/udp_com-release.git
+        open_pr: true
     - name: create github release
       uses: actions/create-release@v1
       with:
