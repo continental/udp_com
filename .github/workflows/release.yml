@@ -14,7 +14,7 @@ jobs:
     steps:
     - name: checkout repo
       uses: actions/checkout@v2
-    - name: bloom_release
+    - name: bloom release
       id: bloom
       uses: at-wat/bloom-release-action@v0
       with:
@@ -30,6 +30,6 @@ jobs:
       uses: actions/create-release@v1
       with:
         tag_name: ${{ steps.bloom.outputs.version }}
-        release_name: ${{ steps.bloom.outputs.version }}
+        release_name: Release ${{ steps.bloom.outputs.version }}
       env:
-        GITHUB_TOKEN: ${{ secrets.BLOOM_RELEASE_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
