@@ -43,5 +43,5 @@ jobs:
       - name: build and test
         uses: ros-tooling/action-ros-ci@0.0.18
         with:
-         package-name: grbl_ros
+         package-name: udp_com
          target-ros1-distro: ${{ matrix.ros_distribution }}
