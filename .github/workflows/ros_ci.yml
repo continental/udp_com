@@ -45,4 +45,3 @@ jobs:
         with:
          package-name: udp_com
          target-ros1-distro: ${{ matrix.ros_distribution }}
-         target-ros2-distro: foxy
