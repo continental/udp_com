@@ -37,8 +37,8 @@ Changelog for package udp_com
 * Merge pull request `#26 <https://github.com/continental/udp_com/issues/26>`_ from continental/ros1-devel
 * Contributors: Evan Flynn
 
-Forthcoming
------------
+1.1.1 (2020-08-14)
+------------------
 * find rostest once
 * add roslint to testdepend
 * add roslint within test conditional
