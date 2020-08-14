@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">udp_com
-   &#160;<span id="projectnumber">1.0.9</span>
+   &#160;<span id="projectnumber">1.1.1</span>
    </div>
    <div id="projectbrief">Provides a flexible ROS driver for working with UDP interfaces</div>
   </td>
@@ -73,8 +73,17 @@ $(function() {
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Platform  </th><th class="markdownTableHeadNone">ROS Release   </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><a href="https://releases.ubuntu.com/18.04.4/">Ubuntu 18.04 Bionic</a>  </td><td class="markdownTableBodyNone"><a href="https://wiki.ros.org/melodic/Installation/Ubuntu">ROS Melodic</a>   </td></tr>
+<td class="markdownTableBodyNone"><a href="https://releases.ubuntu.com/16.04.4/">Ubuntu 16.04 Bionic</a>  </td><td class="markdownTableBodyNone"><a href="https://wiki.ros.org/kinetic/Installation/Ubuntu">ROS Kinetic</a>   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="https://releases.ubuntu.com/18.04/">Ubuntu 18.04 Bionic</a>  </td><td class="markdownTableBodyNone"><a href="https://wiki.ros.org/melodic/Installation/Ubuntu">ROS Melodic</a>   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="https://releases.ubuntu.com/20.04/">Ubuntu 20.04 Bionic</a>  </td><td class="markdownTableBodyNone"><a href="https://wiki.ros.org/noetic/Installation/Ubuntu">ROS Noetic</a>   </td></tr>
 </table>
+<h2>Quickstart</h2>
+<p>Make sure you have one of the above ROS distributions installed on your system.</p>
+<p>Install like any other ROS package: </p><div class="fragment"><div class="line">sudo apt-get install ros-&lt;your-distro&gt;-udp-com</div>
+</div><!-- fragment --><p><b>NOTE:</b> PR's are open to release the udp_com package for each of the distros. Once merged it could be a few weeks before this package is available using the above command.</p>
+<h2>Getting Started</h2>
 <p>There are two ways of utlizing this package:</p><ul>
 <li>using the provided launch file and launching from the command line<ul>
 <li><code>roslaunch udp_com udp_com.launch</code></li>
@@ -87,7 +96,7 @@ $(function() {
 <li><b>send_service</b>: creates a ROS service to send data to a specific socket</li>
 </ul>
 <p>Please <a href="https://continental.github.io/udp_com/html/index.html">review the source code documentation</a> for more details on how the project is structured.</p>
-<h2>Getting started</h2>
+<h2>From source</h2>
 <p>For anyone already familiar with ROS, please see how this package is <a href="https://github.com/continental/hfl_driver.git">utilized and implemented in the hfl_driver package</a>.</p>
 <p>First, make sure your using the targeted platform and releases listed above.</p>
 <p>Go ahead and clone this repo into your <code>catkin_ws</code>: </p><div class="fragment"><div class="line">git clone https://github.com/continental/udp_com.git</div>
