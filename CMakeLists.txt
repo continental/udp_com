@@ -10,7 +10,6 @@ add_compile_options(-std=c++11)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  roslint
   roscpp
   std_msgs
   message_generation
@@ -174,11 +173,13 @@ install(FILES
 ## Testing ##
 #############
 
-# ROS linter
-roslint_cpp()
-
 if(CATKIN_ENABLE_TESTING)
+  find_package(roslint REQUIRED)
   find_package(rostest REQUIRED)
+
+  # ROS linter
+  roslint_cpp()
+ 
   # Add rostest gtest
   add_rostest_gtest(tests_${PROJECT_NAME}
 	  test/${PROJECT_NAME}.test
