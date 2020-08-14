@@ -30,6 +30,9 @@ jobs:
     container:
       image: ${{ matrix.docker_image }}
     steps:
+      - name: get repo name
+        run: echo ::set-env name=REPOSITORY_NAME::$(echo "$GITHUB_REPOSITORY" | awk -F / '{print $2}' | sed -e "s/:refs//")
+        shell: bash
       - name: setup directories
         run: mkdir -p ros_ws/src
       - name: checkout
@@ -41,7 +44,8 @@ jobs:
         with:
           required-ros-distributions: ${{ matrix.ros_distribution }}
       - name: build and test
-        uses: ros-tooling/action-ros-ci@0.0.18
+        uses: ros-tooling/action-ros-ci@0.0.19
         with:
          package-name: udp_com
          target-ros1-distro: ${{ matrix.ros_distribution }}
+         vcs-repo-file-url: ""
