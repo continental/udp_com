@@ -179,8 +179,6 @@ roslint_cpp()
 
 if(CATKIN_ENABLE_TESTING)
   find_package(rostest REQUIRED)
-  find_package(gtest)
-  
   # Add rostest gtest
   add_rostest_gtest(tests_${PROJECT_NAME}
 	  test/${PROJECT_NAME}.test
