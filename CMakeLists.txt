@@ -174,6 +174,8 @@ install(FILES
 #############
 
 if(CATKIN_ENABLE_TESTING)
+  find_package(roslint rostest REQUIRED)
+
   # ROS linter
   roslint_cpp()
  
