@@ -6,8 +6,8 @@ This package was designed as a generic package to assist with interfacing ROS wi
 | Platform                                                   | ROS Release                                                    |
 | ---------------------------------------------------------- | -------------------------------------------------------------- |
 | [Ubuntu 16.04 Bionic](https://releases.ubuntu.com/16.04.4/) | [ROS Kinetic](https://wiki.ros.org/kinetic/Installation/Ubuntu) |
-| [Ubuntu 18.04 Bionic](https://releases.ubuntu.com/18.04.4/) | [ROS Melodic](https://wiki.ros.org/melodic/Installation/Ubuntu) |
-| [Ubuntu 20.04 Bionic](https://releases.ubuntu.com/20.04.4/) | [ROS Noetic](https://wiki.ros.org/noetic/Installation/Ubuntu) |
+| [Ubuntu 18.04 Bionic](https://releases.ubuntu.com/18.04/) | [ROS Melodic](https://wiki.ros.org/melodic/Installation/Ubuntu) |
+| [Ubuntu 20.04 Bionic](https://releases.ubuntu.com/20.04/) | [ROS Noetic](https://wiki.ros.org/noetic/Installation/Ubuntu) |
 
 
 ### Quickstart
