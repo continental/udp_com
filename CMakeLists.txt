@@ -174,12 +174,12 @@ install(FILES
 #############
 
 if(CATKIN_ENABLE_TESTING)
-  find_package(roslint rostest REQUIRED)
+  find_package(roslint REQUIRED)
+  find_package(rostest REQUIRED)
 
   # ROS linter
   roslint_cpp()
  
-  find_package(rostest REQUIRED)
   # Add rostest gtest
   add_rostest_gtest(tests_${PROJECT_NAME}
 	  test/${PROJECT_NAME}.test
