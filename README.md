@@ -1,4 +1,4 @@
-# UDP Communication ![ROS CI](https://github.com/continental/udp_com/workflows/ROS%20CI/badge.svg)
+# UDP Communication ![ROS CI](https://github.com/continental/udp_com/workflows/ROS%20CI/badge.svg) [![ROS Buildfarm](http://build.ros.org/buildStatus/icon?job=Kdev__udp_com__ubuntu_xenial_amd64&build=9)](http://build.ros.org/view/Kdev/job/Kdev__udp_com__ubuntu_xenial_amd64/9/)
 This package was designed as a generic package to assist with interfacing ROS with the UDP transport layer. It provides ROS Services for creating sockets, sending and receiving UDP data.
 
 **Supported platforms/releases**:

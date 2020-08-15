@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>udp_com</name>
-  <version>1.0.9</version>
-  <description>The udp_com package</description>
+  <version>1.1.1</version>
+
+  <description>Generic UDP communication ROS package</description>
 
   <maintainer email="evan.flynn@continental.com">Evan Flynn</maintainer>
   <maintainer email="gerardo.bravo@continental.com">Gerardo Bravo</maintainer>
