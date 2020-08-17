@@ -18,7 +18,6 @@ Install like any other ROS package:
 ```
 sudo apt-get install ros-<your-distro>-udp-com
 ```
-**NOTE:** PR's are open to release the udp_com package for each of the distros. Once merged it could be a few weeks before this package is available using the above command.
 
 ### Getting Started
 There are two ways of utlizing this package:
@@ -56,3 +55,7 @@ And now you should be able to run the `udp_com` launch file:
 ```
 roslaunch udp_com udp_com.launch
 ```
+
+
+### Future work
+We are currently working towards open-sourcing a ROS2 version of this driver with the same functionality. Star or watch this repo to stay updated on future releases.
