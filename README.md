@@ -55,3 +55,7 @@ And now you should be able to run the `udp_com` launch file:
 ```
 roslaunch udp_com udp_com.launch
 ```
+
+
+### Future work
+We are currently working towards open-sourcing a ROS2 version of this driver with the same functionality. Star or watch this repo to stay updated on future releases.
