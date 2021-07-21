@@ -2,6 +2,23 @@
 Changelog for package udp_com
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.1.2 (2021-07-21)
+------------------
+* update release ci
+* update ros1 ci
+* fix launch file, use namespace arg
+* add note about future work
+* remove note about open PRs
+* added ros buildfarm status to readme
+* update package description
+* remove unnecessary step
+* update doxyfile
+* add note about releases
+* fix ubuntu links
+* update README with other ROS distros
+* trying a different checkout method
+* Contributors: Evan Flynn
+
 1.1.1 (2020-08-14)
 ------------------
 * find rostest once
