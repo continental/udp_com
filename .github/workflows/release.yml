@@ -1,4 +1,4 @@
-name: Release
+name: Generate Release
 
 on:
  push:
@@ -6,7 +6,7 @@ on:
       - package.xml
       - 'package.xml'
     branches:
-      - ros1/main
+      - main
 
 jobs:
   bloom-release:
@@ -18,7 +18,7 @@ jobs:
       id: bloom
       uses: at-wat/bloom-release-action@v0
       with:
-        ros_distro: kinetic melodic noetic
+        ros_distro: melodic noetic
         github_token_bloom: ${{ secrets.BLOOM_RELEASE_TOKEN }}
         release_repository_push_url: https://github.com/flynneva/udp_com-release.git
         github_user: flynneva
