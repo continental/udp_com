@@ -3,7 +3,7 @@ name: ROS 1 CI
 on:
   pull_request:
     branches:
-      - 'ros1/*'
+      - 'main'
 jobs:
   test_environment-linux:
     runs-on: ubuntu-latest
@@ -11,14 +11,9 @@ jobs:
       fail-fast: false
       matrix:
         ros_distribution:
-          - kinetic
           - melodic
           - noetic
         include:
-            # Kinetic Kame (May 2016 - May 2021)
-          - docker_image: ubuntu:xenial
-            ros_distribution: kinetic
-            ros_version: 1
             # Melodic Morenia (May 2018 - May 2023)
           - docker_image: ubuntu:bionic
             ros_distribution: melodic
@@ -37,11 +32,11 @@ jobs:
         with:
           path: ros_ws/src
       - name: setup ROS environment
-        uses: ros-tooling/setup-ros@0.0.25
+        uses: ros-tooling/setup-ros@master
         with:
           required-ros-distributions: ${{ matrix.ros_distribution }}
       - name: build and test
-        uses: ros-tooling/action-ros-ci@0.0.19
+        uses: ros-tooling/action-ros-ci@master
         with:
          package-name: udp_com
          target-ros1-distro: ${{ matrix.ros_distribution }}

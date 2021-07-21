@@ -17,7 +17,7 @@
 
 
 
-	<group ns="$(arg ethernet_interface)">
+	<group ns="$(arg namespace)">
 		<!-- Nodelet Manager -->
 		<node pkg="nodelet" type="nodelet" name="$(arg manager_name)" args="manager" output="screen" />
 
