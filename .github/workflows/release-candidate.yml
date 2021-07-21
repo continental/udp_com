@@ -10,11 +10,6 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-        with:
-          #checkout branch specified in issue body
-          ref: ${{ github.event.issue.body }}
-      - name: prepare repo
-        run: git checkout ${{ github.event.issue.body }}
       - name: create release
         id: create_release
         uses: at-wat/catkin-release-action@v1.0.13
@@ -23,18 +18,7 @@ jobs:
           git_user: flynneva
           git_email: evanflynn.msu@gmail.com
           github_token: ${{ secrets.GITHUB_TOKEN }}
-      - name: open ROS 1 pull-request
-        if: contains(github.event.issue.body, 'ros1')
-        uses: repo-sync/pull-request@v2
-        with:
-          source_branch: ${{ steps.create_release.outputs.created_branch }}
-          destination_branch: ros1/main
-          pr_title: Release ${{ steps.create_release.outputs.version}}
-          pr_body: close \#${{ github.event.issue.number }}
-          pr_assignee: ${{ github.actor }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-      - name: open ROS 2 pull-request
-        if: contains(github.event.issue.body, 'ros2')
+      - name: open pull-request
         uses: repo-sync/pull-request@v2
         with:
           source_branch: ${{ steps.create_release.outputs.created_branch }}
