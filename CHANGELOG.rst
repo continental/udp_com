@@ -2,8 +2,8 @@
 Changelog for package udp_com
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.2 (2021-07-21)
+------------------
 * Merge pull request `#99 <https://github.com/continental/udp_com/issues/99>`_ from flynneva/main
 * update release ci
 * Merge pull request `#98 <https://github.com/continental/udp_com/issues/98>`_ from flynneva/main
